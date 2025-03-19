@@ -4,15 +4,14 @@ import os
 
 def remove_background(image_path, output_path="apple_no_background.png"):
     try:
-        # Read the image
+
         img = cv2.imread(image_path)
         if img is None:
             raise FileNotFoundError(f"Could not read image at {image_path}")
-
-        # Convert the image to HSV color space
+        
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-        #lower and upper bounds for green background color
+
         lower_green = np.array([36, 25, 25])        
         upper_green = np.array([86, 255, 255])
 
@@ -38,7 +37,7 @@ def remove_background(image_path, output_path="apple_no_background.png"):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-image_file = "applewithbackground.jpg" 
+image_file = "Picture manipulation/applewithbackground.jpg" 
 
 if os.path.exists(image_file):
     remove_background(image_file)

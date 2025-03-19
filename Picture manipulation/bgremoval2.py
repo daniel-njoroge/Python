@@ -23,8 +23,7 @@ apple = image * mask2[:, :, np.newaxis]
 
 transparent_bg = np.zeros((apple.shape[0], apple.shape[1], 4), dtype=np.uint8)
 transparent_bg[:, :, :3] = apple
-transparent_bg[:, :, 3] = mask2 * 255  # Set alpha channel
-
+transparent_bg[:, :, 3] = mask2 * 255
 
 cv2.imwrite('apple_extracted.png', transparent_bg)
 
