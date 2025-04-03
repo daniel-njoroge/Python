@@ -1,0 +1,34 @@
+digraph Use_Case_Diagram {
+	rankdir=LR
+	Student [fillcolor=lightblue shape=ellipse style=filled]
+	Tutor [fillcolor=lightgreen shape=ellipse style=filled]
+	Parent [fillcolor=lightcoral shape=ellipse style=filled]
+	Register [shape=box]
+	Login [shape=box]
+	Logout [shape=box]
+	"View Materials" [shape=box]
+	"Rate Materials" [shape=box]
+	"Post Content" [shape=box]
+	"View Ratings" [shape=box]
+	"View Payments" [shape=box]
+	Withdraw [shape=box]
+	"Make Payment" [shape=box]
+	"View Student Usage" [shape=box]
+	Student -> Register
+	Tutor -> Register
+	Parent -> Register
+	Student -> Login
+	Tutor -> Login
+	Parent -> Login
+	Student -> Logout
+	Tutor -> Logout
+	Parent -> Logout
+	Student -> "View Materials"
+	Student -> "Rate Materials"
+	Tutor -> "Post Content"
+	Tutor -> "View Ratings"
+	Tutor -> "View Payments"
+	Tutor -> Withdraw
+	Parent -> "Make Payment"
+	Parent -> "View Student Usage"
+}
